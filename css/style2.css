@@ -1,0 +1,156 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+  }
+  
+  .calculator-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for hover */
+  }
+
+  .calculator-container:hover { /* NEW: Hover effect for calculator cards */
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+  /* Section container */
+.calculator-section {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .calculator-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF; /* Updated for blue color */
+    animation: slideIn 1s ease-in-out; /* Title animation */
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+/* Styled input fields */
+input, select { /* NEW: Added styles for inputs and dropdowns */
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth focus effect */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+input:focus, select:focus { /* NEW: Focus effect for inputs */
+    border-color: #007BFF; /* Highlighted border */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Added glow */
+}
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+.input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    outline: none;
+    font-size: 16px;
+}
+  
+  button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background: #0056b3;
+  }
+  
+  .result {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
